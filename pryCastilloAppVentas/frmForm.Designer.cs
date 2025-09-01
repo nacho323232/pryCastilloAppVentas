@@ -34,9 +34,10 @@
             lblPrecio = new Label();
             btnRegistrar = new Button();
             dtpFecha = new DateTimePicker();
-            txtProducto = new TextBox();
             txtCantidad = new TextBox();
             txtPrecio = new TextBox();
+            btnCancelar = new Button();
+            lstProducto = new ComboBox();
             SuspendLayout();
             // 
             // lblFecha
@@ -83,7 +84,7 @@
             // btnRegistrar
             // 
             btnRegistrar.Font = new Font("Segoe UI", 10F);
-            btnRegistrar.Location = new Point(14, 215);
+            btnRegistrar.Location = new Point(272, 215);
             btnRegistrar.Name = "btnRegistrar";
             btnRegistrar.Size = new Size(102, 33);
             btnRegistrar.TabIndex = 4;
@@ -97,14 +98,6 @@
             dtpFecha.Name = "dtpFecha";
             dtpFecha.Size = new Size(240, 25);
             dtpFecha.TabIndex = 6;
-            // 
-            // txtProducto
-            // 
-            txtProducto.Font = new Font("Segoe UI", 10F);
-            txtProducto.Location = new Point(134, 51);
-            txtProducto.Name = "txtProducto";
-            txtProducto.Size = new Size(240, 25);
-            txtProducto.TabIndex = 7;
             // 
             // txtCantidad
             // 
@@ -122,14 +115,34 @@
             txtPrecio.Size = new Size(240, 25);
             txtPrecio.TabIndex = 9;
             // 
+            // btnCancelar
+            // 
+            btnCancelar.Font = new Font("Segoe UI", 10F);
+            btnCancelar.Location = new Point(14, 215);
+            btnCancelar.Name = "btnCancelar";
+            btnCancelar.Size = new Size(102, 33);
+            btnCancelar.TabIndex = 10;
+            btnCancelar.Text = "Cancelar";
+            btnCancelar.UseVisualStyleBackColor = true;
+            // 
+            // lstProducto
+            // 
+            lstProducto.Font = new Font("Segoe UI", 10F);
+            lstProducto.FormattingEnabled = true;
+            lstProducto.Location = new Point(134, 57);
+            lstProducto.Name = "lstProducto";
+            lstProducto.Size = new Size(240, 25);
+            lstProducto.TabIndex = 11;
+            // 
             // frmForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(475, 274);
+            Controls.Add(lstProducto);
+            Controls.Add(btnCancelar);
             Controls.Add(txtPrecio);
             Controls.Add(txtCantidad);
-            Controls.Add(txtProducto);
             Controls.Add(dtpFecha);
             Controls.Add(btnRegistrar);
             Controls.Add(lblPrecio);
@@ -150,8 +163,9 @@
         private Label lblPrecio;
         private Button btnRegistrar;
         private DateTimePicker dtpFecha;
-        private TextBox txtProducto;
         private TextBox txtCantidad;
         private TextBox txtPrecio;
+        private Button btnCancelar;
+        private ComboBox lstProducto;
     }
 }
