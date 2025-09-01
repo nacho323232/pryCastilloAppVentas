@@ -83,6 +83,7 @@
             // 
             // btnRegistrar
             // 
+            btnRegistrar.Enabled = false;
             btnRegistrar.Font = new Font("Segoe UI", 10F);
             btnRegistrar.Location = new Point(272, 215);
             btnRegistrar.Name = "btnRegistrar";
@@ -90,10 +91,12 @@
             btnRegistrar.TabIndex = 4;
             btnRegistrar.Text = "Registrar";
             btnRegistrar.UseVisualStyleBackColor = true;
+            btnRegistrar.TextChanged += btnRegistrar_TextChanged;
             // 
             // dtpFecha
             // 
             dtpFecha.Font = new Font("Segoe UI", 10F);
+            dtpFecha.Format = DateTimePickerFormat.Short;
             dtpFecha.Location = new Point(134, 9);
             dtpFecha.Name = "dtpFecha";
             dtpFecha.Size = new Size(240, 25);
@@ -101,14 +104,17 @@
             // 
             // txtCantidad
             // 
+            txtCantidad.Enabled = false;
             txtCantidad.Font = new Font("Segoe UI", 10F);
             txtCantidad.Location = new Point(134, 103);
             txtCantidad.Name = "txtCantidad";
             txtCantidad.Size = new Size(240, 25);
             txtCantidad.TabIndex = 8;
+            txtCantidad.TextChanged += txtCantidad_TextChanged;
             // 
             // txtPrecio
             // 
+            txtPrecio.Enabled = false;
             txtPrecio.Font = new Font("Segoe UI", 10F);
             txtPrecio.Location = new Point(134, 154);
             txtPrecio.Name = "txtPrecio";
@@ -117,13 +123,15 @@
             // 
             // btnCancelar
             // 
+            btnCancelar.Enabled = false;
             btnCancelar.Font = new Font("Segoe UI", 10F);
-            btnCancelar.Location = new Point(14, 215);
+            btnCancelar.Location = new Point(164, 215);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(102, 33);
             btnCancelar.TabIndex = 10;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = true;
+            btnCancelar.TextChanged += btnCancelar_TextChanged;
             // 
             // lstProducto
             // 
@@ -133,6 +141,7 @@
             lstProducto.Name = "lstProducto";
             lstProducto.Size = new Size(240, 25);
             lstProducto.TabIndex = 11;
+            lstProducto.TextChanged += lstProducto_TextChanged;
             // 
             // frmForm
             // 
