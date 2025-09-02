@@ -16,7 +16,10 @@ namespace pryCastilloAppVentas
         {
             InitializeComponent();
         }
-
+        DateTime vFecha;
+        string vProducto;
+        int vCantidad;
+        int vPrecio;
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -48,26 +51,51 @@ namespace pryCastilloAppVentas
 
         private void btnRegistrar_TextChanged(object sender, EventArgs e)
         {
-            if (txtPrecio.Text == "")
-            {
-                btnRegistrar.Enabled = false;
-            }
-            else
-            {
-                btnRegistrar.Enabled = true;
-            }
+
         }
 
         private void btnCancelar_TextChanged(object sender, EventArgs e)
         {
-            if (txtPrecio.Text == "")
+
+        }
+
+        private void frmForm_Load(object sender, EventArgs e)
+        {
+            vFecha = DateTime.Now;
+            vProducto = "";
+            vCantidad = 0;
+            vPrecio = 0;
+
+
+
+            lstProducto.Items.Add("Gabinete");
+            lstProducto.Items.Add("CPU");
+            lstProducto.Items.Add("RAM");
+        }
+
+        private void txtPrecio_TextChanged(object sender, EventArgs e)
+        {
+            if (txtPrecio.Text != "")
             {
-                btnCancelar.Enabled = false;
+                btnRegistrar.Enabled = true;
             }
             else
             {
-                btnCancelar.Enabled= true;
+                btnRegistrar.Enabled = false;
             }
         }
+
+        private void btnRegistrar_Click(object sender, EventArgs e)
+        {
+            vFecha = dtpFecha.Value;
+            vProducto = lstProducto.Text;
+            vCantidad = Convert.ToInt32(txtCantidad.Text);
+            vPrecio = Convert.ToInt32(txtPrecio.Text);
+
+            lblResultadoRegistro.Text =
+                vFecha + " - " + vProducto
+                + "  " + vCantidad + "  " + vPrecio;
+        }
+
     }
 }

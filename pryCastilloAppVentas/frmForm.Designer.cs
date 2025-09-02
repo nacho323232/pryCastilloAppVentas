@@ -38,6 +38,7 @@
             txtPrecio = new TextBox();
             btnCancelar = new Button();
             lstProducto = new ComboBox();
+            lblResultadoRegistro = new Label();
             SuspendLayout();
             // 
             // lblFecha
@@ -85,13 +86,14 @@
             // 
             btnRegistrar.Enabled = false;
             btnRegistrar.Font = new Font("Segoe UI", 10F);
-            btnRegistrar.Location = new Point(272, 215);
+            btnRegistrar.Location = new Point(272, 205);
             btnRegistrar.Name = "btnRegistrar";
             btnRegistrar.Size = new Size(102, 33);
             btnRegistrar.TabIndex = 4;
             btnRegistrar.Text = "Registrar";
             btnRegistrar.UseVisualStyleBackColor = true;
             btnRegistrar.TextChanged += btnRegistrar_TextChanged;
+            btnRegistrar.Click += btnRegistrar_Click;
             // 
             // dtpFecha
             // 
@@ -120,12 +122,13 @@
             txtPrecio.Name = "txtPrecio";
             txtPrecio.Size = new Size(240, 25);
             txtPrecio.TabIndex = 9;
+            txtPrecio.TextChanged += txtPrecio_TextChanged;
             // 
             // btnCancelar
             // 
             btnCancelar.Enabled = false;
             btnCancelar.Font = new Font("Segoe UI", 10F);
-            btnCancelar.Location = new Point(164, 215);
+            btnCancelar.Location = new Point(143, 205);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(102, 33);
             btnCancelar.TabIndex = 10;
@@ -143,11 +146,21 @@
             lstProducto.TabIndex = 11;
             lstProducto.TextChanged += lstProducto_TextChanged;
             // 
+            // lblResultadoRegistro
+            // 
+            lblResultadoRegistro.Font = new Font("Segoe UI", 12F);
+            lblResultadoRegistro.Location = new Point(14, 264);
+            lblResultadoRegistro.Name = "lblResultadoRegistro";
+            lblResultadoRegistro.Size = new Size(413, 101);
+            lblResultadoRegistro.TabIndex = 12;
+            lblResultadoRegistro.Text = "---";
+            // 
             // frmForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(475, 274);
+            ClientSize = new Size(464, 387);
+            Controls.Add(lblResultadoRegistro);
             Controls.Add(lstProducto);
             Controls.Add(btnCancelar);
             Controls.Add(txtPrecio);
@@ -160,6 +173,7 @@
             Controls.Add(lblFecha);
             Name = "frmForm";
             Text = "App Registro de venta";
+            Load += frmForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -176,5 +190,6 @@
         private TextBox txtPrecio;
         private Button btnCancelar;
         private ComboBox lstProducto;
+        private Label lblResultadoRegistro;
     }
 }
