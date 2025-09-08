@@ -135,6 +135,7 @@
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = true;
             btnCancelar.TextChanged += btnCancelar_TextChanged;
+            btnCancelar.Click += btnCancelar_Click;
             // 
             // lstProducto
             // 

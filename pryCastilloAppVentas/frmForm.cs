@@ -77,10 +77,12 @@ namespace pryCastilloAppVentas
         {
             if (txtPrecio.Text != "")
             {
+                btnCancelar.Enabled = true;
                 btnRegistrar.Enabled = true;
             }
             else
             {
+                btnCancelar.Enabled = false;
                 btnRegistrar.Enabled = false;
             }
         }
@@ -97,5 +99,17 @@ namespace pryCastilloAppVentas
                 + "  " + vCantidad + "  " + vPrecio;
         }
 
+        private void LimpiarControles()
+        {
+            dtpFecha.Value = DateTime.Now;
+            lstProducto.SelectedIndex = -1;
+            txtCantidad.Text = "";
+            txtPrecio.Text = "";
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            LimpiarControles();
+        }
     }
 }
